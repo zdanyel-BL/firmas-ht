@@ -28,9 +28,9 @@ function ejecutar(){
 				this.carTel = function(){
 				//método asignación de característica telefónica
 					if(this.car == "GDL"){
-						this.num_cel = "+52" + this.num_cel;
+						this.num_cel = this.num_cel;
 					}else if(this.car == "CDMX"){
-						this.num_cel = "+52" + this.num_cel;
+						this.num_cel = this.num_cel;
 					}
 				};
 
