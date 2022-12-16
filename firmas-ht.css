@@ -1,0 +1,12 @@
+body {
+   -ms-flex-align: center;
+   align-items: center;--opacidad-negro: 0.4;
+   background-image: linear-gradient(rgba(0, 0, 0, var(--opacidad-negro)), rgba(0, 0, 0, var(--opacidad-negro))),  url("../firmas/img/blue-bg.jpg");
+     background-repeat: no-repeat;
+     background-size: cover;
+     display: -ms-flexbox;
+     /*display: flex;*/
+     height: 100vh;
+     -ms-flex-pack: center;
+     justify-content: center;
+        }
