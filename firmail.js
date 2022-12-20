@@ -1,3 +1,6 @@
+
+num_loc = "0";
+extension = "0";
 //ejecutor de script
 function ejecutar(){
 	//constructor
@@ -7,20 +10,26 @@ function ejecutar(){
 				this.num_cel= num_cel;
 				this.loc = loc;
 				this.car == "GDL";
-				if(this.loc == "GDL"){
-				 this.extension = "+52 387 690 6888x" + extension;}
+				this.extension = extension;
+				if(this.loc == "GDL" && this.extension > 0){
+				 this.extension = " x" + extension;}
+				 else if(this.loc == "CDMX" && this.extension > 0){
+					this.extension = " x" + extension;}
+					else{extension=""}
 				//this.car = car;
 
 				this.ofi = function(){
 				//método asignación de oficina
 					if(this.loc == "GDL"){
 						this.loc = "Centro Logístico Jalisco";
-						this.cp = "Acatlan MX 45713";
+						this.cp = "Acatlán MX 45713";
 						this.calle = "Calle Beijing 100";
+						num_loc = "387 690 6888";
 					}else if(this.loc == "CDMX"){
 						this.loc == "CDMX";
 						this.cp = "Sin Definir";
 						this.calle = "Sin Definir";
+						num_loc = "Sin Definir";
 					}else {this.loc = "CDMX";}
 
 				};
@@ -54,16 +63,17 @@ function ejecutar(){
 						  </td>
 						 </tr>
 			   
-						 <tr>
+						 <tr><br><br>
 						  <td style="padding:0;height:20px; font-family:'helvetica neue',helvetica,sans-serif;vertical-align:top;padding-top:0spx" valign="top" align="left"><br>
 						   <a href="https://haitianmexico.com" target="_blank"><img nosend="1" alt="Logo" style="height:55px; width:178; border:0; " height="20" border="0""  src="./img/haitian.png"></a>
-						  </td>
+						  </td><br>
 						 </tr>
 						 <tr>
 						  <td style="padding:0;font-family:'helvetica neue',helvetica,sans-serif;height:20px; vertical-align:middle; text-align:right;padding-top:6px" valign="middle" align="right">
 						   <span><a href="https://www.facebook.com/haitian.mx/" target="_blank"><img nosend="1" border="0" width="20" alt="Facebook icon" style="border:0; height:20px; width:20px" src="https://cdn3.iconfinder.com/data/icons/capsocial-round/500/facebook-512.png"></a></span>
 						   <span><a href="https://twitter.com/Haitian_Mexico/" target="_blank"><img nosend="1" border="0" width="20" alt="Twitter icon" style="border:0; height:20px; width:20px" src="http://assets.stickpng.com/images/580b57fcd9996e24bc43c53e.png"></a> </span>
 						   <span><a href="https://www.linkedin.com/company/haitian-mexico/mycompany/" target="_blank"><img nosend="1" border="0" width="20" alt="Linkedin icon" style="border:0; height:20px; width:20px" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/LinkedIn_icon_circle.svg/2048px-LinkedIn_icon_circle.svg.png"></a> </span>
+						   <span><a href="https://www.youtube.com/HAITIAN" target="_blank"><img nosend="1" border="0" width="25" alt="YouTube icon" style="border:0; height:22px; width:30px" src="https://i.pinimg.com/originals/19/7b/36/197b365922d1ea3aa1a932ff9bbda4a6.png"></a> </span>
 						   </td>
 						 </tr>
 						</tbody>
@@ -80,6 +90,9 @@ function ejecutar(){
 						  <span style="font-family:'helvetica neue',helvetica,sans-serif;font-size:7pt;color:#eee;letter-spacing:1px;"><span style="font-weight:900;color:#003D6E">Haitian International Mexico S. de R.L. de C.V.</span> <span><br><br></span></span>
 						  <span><a href="https://api.whatsapp.com/send?phone=521${this.num_cel}&text=Hello!" target="_blank"><img nosend="1" border="0" width="20" alt="Mobile icon" style="border:0; height:20px; width:20px" src="http://assets.stickpng.com/images/5a452598546ddca7e1fcbc80.png"></a> </span>
 						  <span style="font-family:'helvetica neue',helvetica,sans-serif;font-size:7pt;color:#eee;letter-spacing:1px"><span style="font-weight:700;color:#737373">+52 ${ this.num_cel }</span><br><br>
+						  <img nosend="1" border="0" width="20" alt="Mobile icon" style="border:0; height:20px; width:20px" src="https://cdn2.iconfinder.com/data/icons/in-the-office-line/100/telephone-512.png"></a> </span>
+           				  <span style="font-family:'helvetica neue',helvetica,sans-serif;font-size:7pt;color:#eee;letter-spacing:1px"><span style="font-weight:700;color:#737373">+52 ${ num_loc + this.extension}</span><br><br>
+
 						 </tr>
 						 
 						 <tr>
